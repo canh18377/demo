@@ -1,0 +1,37 @@
+.searchPage {
+  height: calc(100vh - 64px);
+}
+.Header {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 40px;
+  width: 100vw;
+  padding-bottom: 10px;
+  border-bottom: 1px solid darkgray;
+}
+.contentSearch {
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+  padding-bottom: 35px;
+}
+.choosen {
+  border-bottom: 1px solid black;
+}
+.content {
+  height: calc(100vh - 104px);
+  overflow-y: auto;
+}
+//mobile
+@media screen and (max-width: 768px) {
+  .Header {
+    display: flex;
+    justify-content: space-around;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    height: 40px;
+    width: 100vw;
+    padding-bottom: 10px;
+    border-bottom: 1px solid darkgray;
+  }
+}

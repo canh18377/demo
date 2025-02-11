@@ -1,0 +1,35 @@
+.user {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px;
+  flex: 1;
+}
+.user:hover {
+  background-color: rgb(246, 232, 232);
+}
+.note {
+  display: flex;
+  justify-content: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: rgb(187, 73, 87);
+}
+.iconNote {
+  font-size: 40px;
+  color: rgb(122, 122, 46);
+  height: 60px;
+  width: 50px;
+  position: relative;
+  animation: moveIcon 3s ease-in-out infinite;
+}
+.deleteFollow {
+  cursor: pointer;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+}
+.deleteFollow:hover {
+  background-color: rgb(237, 234, 234);
+}

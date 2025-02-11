@@ -1,0 +1,87 @@
+.currentUser {
+  display: grid;
+  grid-template-columns: 10% 50%;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 30px;
+  justify-content: center;
+  position: relative;
+  column-gap: 2px;
+}
+.formComment {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  display: flex;
+  align-items: center;
+}
+.input {
+  height: 34px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: rgb(245, 246, 247);
+  font-size: small;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.actionComment {
+  position: absolute;
+  top: 18px;
+  right: 10px;
+}
+.commenter {
+  display: flex;
+  align-items: center;
+}
+.contentComment {
+  position: relative;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(79, 79, 14);
+  height: 20px;
+}
+.currentUser_Img {
+  display: flex;
+  flex-direction: column;
+}
+.commenterName {
+  font-size: small;
+  width: 50px;
+  height: 40px;
+  overflow-y: auto;
+}
+.commenterName::-webkit-scrollbar {
+  height: 0;
+}
+.commentText {
+  overflow-x: auto;
+}
+.commentText::-webkit-scrollbar {
+  height: 0;
+}
+.post {
+  border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+  .currentUser_Img {
+    display: none;
+  }
+
+  .currentUser {
+    display: grid;
+    width: 100%;
+
+    grid-template-columns: 1fr;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 30px;
+    justify-content: center;
+    position: relative;
+    column-gap: 2px;
+  }
+  .formComment {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    display: flex;
+    align-items: center;
+  }
+}

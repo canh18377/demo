@@ -1,0 +1,240 @@
+.container {
+  height: 100%;
+  margin-left: 10%;
+  width: 100%;
+  overflow-y: auto;
+
+  scroll-snap-type: y mandatory; /* Kích hoạt chế độ snap cuộn theo trục y */
+}
+.containerVideo {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 33% 1fr;
+  margin-top: 20px;
+  scroll-snap-align: start;
+}
+.totalOfLike {
+  font-size: 1.3rem;
+  margin: 8px 0 0 16px;
+}
+.video video {
+  object-fit: cover;
+}
+
+.content {
+  border-radius: 20px;
+  overflow: hidden;
+  width: 95%;
+  height: 90%;
+  position: relative;
+  scroll-snap-align: start;
+}
+.postponeVideo {
+  position: absolute;
+  top: 40%;
+  right: 45%;
+  color: rgb(47, 40, 40);
+  font-size: 40px;
+}
+.volume {
+  position: absolute;
+  top: 0;
+  left: 6px;
+  color: rgb(116, 114, 114);
+  font-size: 20px;
+}
+.volumeBar {
+  width: 80px;
+  color: black;
+}
+
+.setVolume {
+  display: flex;
+  align-items: center;
+}
+.container::-webkit-scrollbar {
+  height: 0;
+}
+.avatar {
+  height: 3rem;
+  width: 3rem;
+  font-size: small;
+  box-shadow: 0 0 2px black;
+  cursor: pointer;
+}
+.actionItemContainer {
+  display: grid;
+  grid-column: 1fr;
+  grid-template-rows: 24% 7% 5% 10%;
+  margin-left: 2%;
+  position: relative;
+  height: 100%;
+  margin-top: 5%;
+  margin-left: 2%;
+}
+.heartVideo {
+  background-color: rgb(230, 229, 229);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  justify-content: center;
+}
+
+.follow_followed {
+  position: absolute;
+  top: 30px;
+  margin-left: 14px;
+}
+.follwing {
+  color: whitesmoke;
+  background-color: red;
+  box-shadow: 0 0 2px rgb(56, 116, 85);
+  border-radius: 50%;
+  font-size: 1rem;
+}
+.followed {
+  color: rgb(228, 65, 16);
+  box-shadow: 0 0 2px rgb(56, 116, 85);
+  border-radius: 50%;
+  background-color: rgb(244, 248, 244);
+}
+.isFollow {
+  display: none;
+}
+.commentVideo,
+.heartVideo {
+  font-size: 2rem;
+  cursor: pointer;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+}
+.likedVideo {
+  color: red;
+}
+//tablet
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .actionItemContainer {
+    margin-top: 15%;
+  }
+  .containerVideo {
+    grid-template-columns: 65% 1fr;
+  }
+  .content {
+    width: 100%;
+    height: 70%;
+  }
+  .follwing {
+    color: whitesmoke;
+    background-color: red;
+    box-shadow: 0 0 2px rgb(56, 116, 85);
+    border-radius: 50%;
+    font-size: 1.5rem;
+  }
+  .followed {
+    color: rgb(228, 65, 16);
+    box-shadow: 0 0 2px rgb(56, 116, 85);
+    border-radius: 50%;
+    background-color: rgb(244, 248, 244);
+    font-size: 1.5rem;
+  }
+  .avatar {
+    height: 4rem;
+    width: 4rem;
+    font-size: small;
+    box-shadow: 0 0 2px black;
+    cursor: pointer;
+  }
+  .follow_followed {
+    position: absolute;
+    top: 40px;
+    margin-left: 15px;
+  }
+  .commentVideo,
+  .heartVideo {
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+  .totalOfLike {
+    font-size: 1.5rem;
+    margin: 8 7 8 8px;
+  }
+  .actionItemContainer {
+    display: grid;
+    grid-column: 1fr;
+    grid-template-rows: 24% 7% 5% 10%;
+    margin-left: 2%;
+    position: relative;
+    height: 100%;
+    margin-top: 5%;
+    margin-left: 8%;
+  }
+}
+//moblile
+@media screen and (min-width: 545px) and (max-width: 768px) {
+  .containerVideo {
+    grid-template-columns: 60% 1fr;
+  }
+  .video video {
+    object-fit: fill;
+  }
+  .actionItemContainer {
+    grid-template-rows: 25% 18% 5%;
+    margin-top: 35px;
+  }
+  .actionItemContainer {
+    display: grid;
+    grid-column: 1fr;
+    grid-template-rows: 24% 7% 5% 10%;
+    margin-left: 2%;
+    position: relative;
+    height: 100%;
+    margin-top: 5%;
+    margin-left: 4%;
+  }
+}
+@media screen and (max-width: 545px) {
+  .container {
+    height: 100%;
+    margin-left: 10%;
+    width: 100%;
+  }
+  .actionItemContainer {
+    grid-template-rows: 30% 10% 6% 8%;
+    align-items: end;
+  }
+  .video video {
+    object-fit: fill;
+  }
+  .containerVideo {
+    grid-template-columns: 87% auto;
+    align-items: center;
+    scroll-snap-align: start;
+
+    scroll-snap-stop: proximity;
+  }
+  .content {
+    height: 65%;
+  }
+
+  .commentVideo,
+  .heartVideo {
+    font-size: 1.7rem;
+    cursor: pointer;
+  }
+  .avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 3px;
+  }
+  .totalOfLike {
+    font-size: 1.2rem;
+    margin: 8px 0 0 0 12px;
+  }
+  .follow_followed {
+    position: absolute;
+    top: 24px;
+    margin-left: 12px;
+  }
+}

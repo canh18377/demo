@@ -1,0 +1,14 @@
+.iconBackground {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  font-size: medium;
+}
+.Logut,
+.openProfile {
+  display: flex;
+  justify-content: space-evenly;
+}
+.avatarHeader {
+  font-size: 3.5rem;
+}

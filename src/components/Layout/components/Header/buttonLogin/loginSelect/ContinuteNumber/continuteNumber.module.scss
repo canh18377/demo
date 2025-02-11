@@ -1,0 +1,37 @@
+.content {
+  display: flex;
+  margin: auto;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.containerLogin {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(149, 75, 101);
+  text-align: center;
+}
+.account {
+  margin: 5px;
+  height: 30px;
+  border: none;
+  outline: none;
+}
+
+.account:hover {
+  border-radius: 10px;
+  border: 1px solid darkgray;
+}
+
+.containerButton {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+.buttonLogIn {
+  width: 70%;
+  background-color: rgb(254, 44, 85);
+  height: 30px;
+  border-radius: 120px;
+}

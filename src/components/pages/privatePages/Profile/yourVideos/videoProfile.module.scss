@@ -1,0 +1,107 @@
+.containerVideos {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.containerVideo_Info {
+  display: grid;
+  grid-template-rows: 100%;
+  margin: 5px;
+  height: auto;
+  width: 14%;
+  aspect-ratio: 9/14;
+  position: relative;
+  box-shadow: 0 0 1px 1px rgba(9, 9, 9, 0.1);
+}
+.videoInfo {
+  position: absolute;
+  bottom: 0;
+  color: rgb(237, 231, 231);
+  left: 0;
+  height: 30px;
+  overflow-y: auto;
+}
+.videoInfo::-webkit-scrollbar {
+  height: 0;
+}
+.nameVideo {
+  width: 100%;
+  overflow-x: auto;
+}
+.name_match {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.containerVideo video {
+  object-fit: fill;
+  border-radius: 5px;
+}
+
+.update_deleteVideo {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.containerVideo_Info_Liked {
+  display: grid;
+  grid-template-rows: 100%;
+  margin: 5px;
+  height: 34%;
+  width: 14%;
+  aspect-ratio: 9/14;
+
+  position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+
+  box-shadow: 0 0 1px 1px rgba(9, 9, 9, 0.1);
+}
+
+//moblile
+@media screen and (max-width: 768px) and (min-width: 545px) {
+  .containerVideo_Info {
+    height: 35%;
+    width: 25%;
+    aspect-ratio: 9/14;
+  }
+  .containerVideo video {
+    object-fit: fill;
+    border-radius: 5px;
+  }
+  .containerVideo_Info_Liked {
+    height: 24%;
+    width: 27%;
+    aspect-ratio: 9/14;
+  }
+}
+@media screen and (max-width: 545px) {
+  .containerVideo_Info {
+    height: auto;
+    aspect-ratio: 9/16;
+    width: 35%;
+  }
+  .containerVideo video {
+    object-fit: fill;
+    border-radius: 5px;
+  }
+  .containerVideo_Info_Liked {
+    height: auto;
+    aspect-ratio: 9/16;
+    width: 33%;
+  }
+}
+//tablet
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .containerVideo_Info {
+    height: auto;
+    width: 27%;
+    aspect-ratio: 9/15;
+  }
+  .containerVideo_Info_Liked {
+    height: auto;
+    width: 27%;
+    aspect-ratio: 9/15;
+  }
+}

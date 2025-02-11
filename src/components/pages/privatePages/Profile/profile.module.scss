@@ -1,0 +1,128 @@
+.yourProfile {
+  display: grid;
+  grid-template-rows: 55% 1fr;
+  height: calc(100vh - 64px);
+  width: 100vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.infoProfile {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 14% auto;
+  grid-template-rows: 70%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  box-sizing: border-box;
+  margin-left: 13%;
+  margin-top: 3%;
+  font-size: 100px;
+  align-items: center;
+}
+
+.yourCaption {
+  margin-left: 20px;
+  font-size: small;
+  text-align: center;
+  color: rgb(196, 89, 89);
+}
+.yourInfo {
+  margin-left: 2%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 14%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.modifyInfo {
+  display: flex;
+  color: blue;
+}
+.yourHistory {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  height: 35px;
+}
+.videoCategory {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  height: 100%;
+  padding-bottom: 7px;
+  cursor: pointer;
+}
+.underText {
+  border-bottom: 2px solid black;
+}
+.yourVideos {
+  height: auto;
+  width: 100%;
+}
+.profileAvatar {
+  width: 100%;
+  height: 180px;
+}
+
+@media screen and (max-width: 570px) {
+  .yourProfile {
+    grid-template-rows: 40% 1fr;
+  }
+  .yourInfo {
+    font-size: 8%;
+  }
+
+  .infoProfile {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 30% auto;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    box-sizing: border-box;
+  }
+  .profileAvatar {
+    width: 85%;
+    height: 100px;
+  }
+}
+@media screen and (min-width: 570px) and (max-width: 767px) {
+  .infoProfile {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 30% auto;
+    grid-template-rows: 70%;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    box-sizing: border-box;
+    margin-left: 13%;
+    margin-top: 3%;
+    font-size: 100px;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 375px) {
+  .idProfile {
+    width: 100px;
+    word-wrap: break-word;
+  }
+}
+//tablet
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .yourInfo {
+    font-size: 16%;
+  }
+  .infoProfile {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 30% auto;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    box-sizing: border-box;
+  }
+  .profileAvatar {
+    width: 90%;
+    height: 230px;
+    font-size: large;
+  }
+
+  .yourProfile {
+    grid-template-rows: 50% 1fr;
+  }
+}

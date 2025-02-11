@@ -24,7 +24,7 @@ function UpdateVideo(prop) {
     }
     try {
       const response = await fetch(
-        "http://localhost:8080/profile/updateVideo",
+        "https://back-end-myfilm-4.onrender.com/profile/updateVideo",
         {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ videoInfo }),

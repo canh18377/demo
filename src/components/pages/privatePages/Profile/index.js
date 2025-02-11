@@ -16,7 +16,7 @@ function Profile() {
   const [stateLoading, setStateLoading] = useState(true);
   console.log("author", author);
   useEffect(() => {
-    fetch(`http://localhost:8080/profile/${author}`, {
+    fetch(`https://back-end-myfilm-4.onrender.com/profile/${author}`, {
       method: "GET",
       headers: {
         "Content-type": "application/json",

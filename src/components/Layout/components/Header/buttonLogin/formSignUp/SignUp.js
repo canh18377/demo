@@ -17,7 +17,7 @@ function SignUp({ setIsLogIn }) {
       return;
     }
     try {
-      const response = await fetch("http://localhost:8080/account/create", {
+      const response = await fetch("https://back-end-myfilm-4.onrender.com/account/create", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(account),

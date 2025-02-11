@@ -60,10 +60,10 @@ function Following() {
   }, [isLoged]);
 
   const getVideo = useCallback(() => {
-    let APIUrl = "http://localhost:8080";
+    let APIUrl = "https://back-end-myfilm-4.onrender.com/";
     const lastVideo = videoLengthRef.current;
     if (isLoged) {
-      APIUrl = `http://localhost:8080/following/${profileInfoLocal.author}/${lastVideo}`;
+      APIUrl = `https://back-end-myfilm-4.onrender.com/following/${profileInfoLocal.author}/${lastVideo}`;
     }
     fetch(APIUrl, {
       headers: { "Content-type": "application/json" },
@@ -120,7 +120,7 @@ function Following() {
     async (idVideo) => {
       const likePerson = isLoged && profileInfoLocal.author;
       try {
-        const response = await fetch(`http://localhost:8080/likeVideos`, {
+        const response = await fetch(`https://back-end-myfilm-4.onrender.com/likeVideos`, {
           method: "POST",
           body: JSON.stringify({ idVideo, likePerson }),
           headers: { "Content-type": "application/json" },

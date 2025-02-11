@@ -63,8 +63,7 @@ function Home() {
       console.log(idVideo);
       try {
         fetch(
-          `http://localhost:8080/likedVideoHome/${
-            profileInfoLocal && profileInfoLocal.author
+          `https://back-end-myfilm-4.onrender.com/likedVideoHome/${profileInfoLocal && profileInfoLocal.author
           }/${idVideo}`,
           {
             headers: { "Content-type": "application/json" },
@@ -99,7 +98,7 @@ function Home() {
 
   const getVideo = useCallback(() => {
     try {
-      fetch(`http://localhost:8080`, {
+      fetch(`https://back-end-myfilm-4.onrender.com/`, {
         headers: { "Content-type": "application/json" },
       })
         .then((res) => {
@@ -144,7 +143,7 @@ function Home() {
     async (idVideo) => {
       const likePerson = isLoged && profileInfoLocal && profileInfoLocal.author;
       try {
-        const response = await fetch(`http://localhost:8080/likeVideos`, {
+        const response = await fetch(`https://back-end-myfilm-4.onrender.com/likeVideos`, {
           method: "POST",
           body: JSON.stringify({ idVideo, likePerson }),
           headers: { "Content-type": "application/json" },
@@ -203,8 +202,7 @@ function Home() {
     }
     try {
       fetch(
-        `http://localhost:8080/listFollow/${
-          profileInfoLocal && profileInfoLocal.author
+        `https://back-end-myfilm-4.onrender.com/listFollow/${profileInfoLocal && profileInfoLocal.author
         }`,
         {
           headers: { "Content-type": "application/json" },

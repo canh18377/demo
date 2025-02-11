@@ -30,7 +30,7 @@ const UploadVideo = () => {
     form.append("genres", JSON.stringify(genres));
     form.append("limitedAge", infoVideoUpload.limitedAge);
     try {
-      fetch(`http://localhost:8080/uploadVideo/${profileInfo.author}`, {
+      fetch(`https://back-end-myfilm-4.onrender.com/uploadVideo/${profileInfo.author}`, {
         method: "POST",
         body: form,
       })

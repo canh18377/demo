@@ -26,7 +26,7 @@ function SearchUsers({ status, setStatus }) {
   const getSearch = useCallback(() => {
     try {
       fetch(
-        `http://localhost:8080/search/users/${encodeURIComponent(
+        `https://back-end-myfilm-4.onrender.com/search/users/${encodeURIComponent(
           contentSearch
         )}`,
         {

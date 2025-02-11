@@ -39,7 +39,7 @@ function ActionComment({
     }
     try {
       const response = await fetch(
-        "http://localhost:8080/videoComments/deleteComment",
+        "https://back-end-myfilm-4.onrender.com/videoComments/deleteComment",
         {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },
@@ -69,7 +69,7 @@ function ActionComment({
     }
     try {
       const response = await fetch(
-        "http://localhost:8080/videoComments/updateComment",
+        "https://back-end-myfilm-4.onrender.com/videoComments/updateComment",
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

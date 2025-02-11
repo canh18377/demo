@@ -17,7 +17,7 @@ function VideoUpLoaded({ author }) {
   const [playVideo, setPlayVideo] = useState(null);
   useEffect(() => {
     profileInfoLocal = JSON.parse(localStorage.getItem("profileInfo"));
-    fetch(`http://localhost:8080/profile/videos/${author}`, {
+    fetch(`https://back-end-myfilm-4.onrender.com/profile/videos/${author}`, {
       method: "GET",
       headers: { "Content-type": "application/json" },
     })

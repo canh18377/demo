@@ -17,7 +17,7 @@ function List_Follower_Following() {
   const getFollowList = async (isFollow) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/profile/getFollowList/${profileInfo.author}/${isFollow}`,
+        `https://back-end-myfilm-4.onrender.com/profile/getFollowList/${profileInfo.author}/${isFollow}`,
         {
           headers: { "Content-Type": "application/json" },
         }
@@ -43,7 +43,7 @@ function List_Follower_Following() {
   const deleteFollowing = async (followingPerson) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/profile/deleteFollowing`,
+        `https://back-end-myfilm-4.onrender.com/profile/deleteFollowing`,
         {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },

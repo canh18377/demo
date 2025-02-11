@@ -16,7 +16,7 @@ function LikedVideos({ author }) {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     profileInfoLocal = JSON.parse(localStorage.getItem("profileInfo"));
-    fetch(`http://localhost:8080/profile/likedVideos/${author}`, {
+    fetch(`https://back-end-myfilm-4.onrender.com/profile/likedVideos/${author}`, {
       method: "GET",
       headers: { "Content-type": "application/json" },
     })

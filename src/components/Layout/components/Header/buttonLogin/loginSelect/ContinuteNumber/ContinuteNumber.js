@@ -19,7 +19,7 @@ function ContinuteNumber({
       message.error("Hãy nhập đầy đủ thông tin");
       return;
     }
-    const APIUser = "http://localhost:8080/account";
+    const APIUser = "https://back-end-myfilm-4.onrender.com/account";
     try {
       const response = await fetch(APIUser, {
         method: "POST",

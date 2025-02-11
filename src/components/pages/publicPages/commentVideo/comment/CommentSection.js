@@ -52,7 +52,7 @@ function CommentSection({
     }
     try {
       const response = await fetch(
-        "http://localhost:8080/videoComments/storeComment",
+        "https://back-end-myfilm-4.onrender.com/videoComments/storeComment",
         {
           method: "POST",
           headers: { "Content-type": "application/json" },
@@ -82,7 +82,7 @@ function CommentSection({
   }, [like_disLike_List]);
 
   const sendList_Dis_Like = (like_disLike_List) => {
-    const url = "http://localhost:8080/videoComments/dis_likeComment";
+    const url = "https://back-end-myfilm-4.onrender.com/videoComments/dis_likeComment";
     const formData = new FormData();
     formData.append("like_disLike_List", JSON.stringify(like_disLike_List));
     navigator.sendBeacon(url, formData);

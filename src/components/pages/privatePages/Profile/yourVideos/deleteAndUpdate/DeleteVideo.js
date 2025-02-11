@@ -5,7 +5,7 @@ function DeleteVideo({ idVideo, name, setDeleted_Updated }) {
   const [isOpenModal, setIsOpenModal] = useState(false);
   const handleDelete = async () => {
     try {
-      const res = await fetch("http://localhost:8080/profile/deleteVideo", {
+      const res = await fetch("https://back-end-myfilm-4.onrender.com/profile/deleteVideo", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ idVideo: idVideo }),

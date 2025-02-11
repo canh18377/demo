@@ -17,7 +17,7 @@ function FormUpdate({ profileInfo, setProfileInfo, setIsLoged }) {
     formData.append("caption", profileInfo.caption);
     formData.append("name", profileInfo.name);
     setIsModalOpen(false);
-    fetch("http://localhost:8080/profile/update", {
+    fetch("https://back-end-myfilm-4.onrender.com/profile/update", {
       method: "PUT",
       headers: { Authorization: `${Token}` },
       body: formData,

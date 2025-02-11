@@ -16,7 +16,7 @@ function VideoComments() {
   useEffect(() => {
     profileLocalstorage = JSON.parse(localStorage.getItem("profileInfo"));
     try {
-      fetch(`http://localhost:8080/videoComments/${idVideo}`, {
+      fetch(`https://back-end-myfilm-4.onrender.com/videoComments/${idVideo}`, {
         headers: { "Content-type": "application/json" },
       })
         .then((res) => {

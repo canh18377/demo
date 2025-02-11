@@ -25,7 +25,7 @@ function SearchTopVideos({ status, setStatus }) {
     console.log("duoc thuc thi");
     try {
       fetch(
-        `http://localhost:8080/search/topVideos/${encodeURIComponent(
+        `https://back-end-myfilm-4.onrender.com/search/topVideos/${encodeURIComponent(
           contentSearch
         )}`,
         {

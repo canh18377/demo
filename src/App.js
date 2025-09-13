@@ -7,6 +7,7 @@ import {
 import { Fragment } from "react";
 import { publicRoutes, privateRoutes } from "./routes";
 import DefaultLayout from "./components/Layout/DefaultLayout";
+import { Home } from "./components/pages/publicPages";
 function App() {
   const ProtectedRoute = ({ Page }) => {
     const isLAuthenticated = () => {
@@ -17,52 +18,7 @@ function App() {
   };
 
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-          {privateRoutes.map((route, index) => {
-            let Layout = DefaultLayout;
-            if (route.layout) {
-              Layout = route.layout;
-            } else if (route.layout === null) {
-              Layout = Fragment;
-            }
-            const Page = route.component;
-            return (
-              <Route
-                path={route.path}
-                key={index}
-                element={
-                  <Layout>
-                    <ProtectedRoute Page={Page} />
-                  </Layout>
-                }
-              />
-            );
-          })}
-          {publicRoutes.map((route, index) => {
-            let Layout = DefaultLayout;
-            if (route.layout) {
-              Layout = route.layout;
-            } else if (route.layout === null) {
-              Layout = Fragment;
-            }
-            const Page = route.component;
-            return (
-              <Route
-                key={index}
-                path={route.path}
-                element={
-                  <Layout>
-                    <Page />
-                  </Layout>
-                }
-              />
-            );
-          })}
-        </Routes>
-      </div>
-    </Router>
+    <Home />
   );
 }
 export default App;
